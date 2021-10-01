@@ -65,7 +65,6 @@ func generate_pieces():
 					piece_to_use = 5
 				piece = possible_pieces[piece_to_use].instance()
 				loops += 1
-			
 			add_child(piece)
 			piece.generate(Vector2(xStart + i * offset, yStart - j * offset))
 			all_pieces[i][j] = piece
