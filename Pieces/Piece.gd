@@ -23,8 +23,6 @@ export var rot_time = 1.5
 
 
 func _ready():
-	$Tween.interpolate_property(self, "scale", Vector2(0,0), Vector2(1,1), 0.25, Tween.TRANS_EXPO, Tween.EASE_IN)
-	$Tween.start()
 	$Select.texture = $Sprite.texture
 	$Select.scale = $Sprite.scale
 	if sfx2 == null:
@@ -53,8 +51,6 @@ func generate(pos):
 		sfx1.play()
 
 func move_piece(change):
-	$Tween.interpolate_property(self, "scale", Vector2(2,2), Vector2(1,1), 0.25, Tween.TRANS_EXPO, Tween.EASE_IN_OUT)
-	$Tween.start()
 	if sfx3 == null:
 		sfx3 = get_node_or_null("/root/Game/3")
 	if sfx3 != null:
